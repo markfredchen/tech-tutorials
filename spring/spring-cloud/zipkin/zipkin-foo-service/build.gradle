@@ -21,5 +21,6 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:1.18.10"
     compile 'com.alibaba:fastjson:1.2.60'
     compile 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
-    compile "org.springframework.cloud:spring-cloud-starter-zipkin:2.1.3.RELEASE"
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '2.1.6.RELEASE'
+
 }
