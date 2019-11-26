@@ -1,0 +1,5 @@
+rootProject.name = 'tech-samples'
+
+include ':spring:spring-cloud:eureka-server'
+include ':spring:spring-cloud:zipkin:basic:zipkin-foo-service'
+include ':spring:spring-cloud:zipkin:basic:zipkin-bar-service'

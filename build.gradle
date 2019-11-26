@@ -1,0 +1,6 @@
+allprojects {
+    group 'io.markfredchen'
+    version '1.0-SNAPSHOT'
+}
+
+

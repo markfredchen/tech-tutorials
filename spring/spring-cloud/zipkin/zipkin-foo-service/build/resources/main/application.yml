@@ -1,0 +1,12 @@
+server:
+  port: 20001
+  servlet:
+    context-path: /foo
+logging:
+  config: classpath:logback-spring.xml
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  application:
+    name: foo-service

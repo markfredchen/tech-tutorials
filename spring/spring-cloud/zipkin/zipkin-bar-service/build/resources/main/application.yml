@@ -1,0 +1,12 @@
+server:
+  port: 20000
+  servlet:
+    context-path: /bar
+logging:
+  config: classpath:logback-spring.xml
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  application:
+    name: bar-service
