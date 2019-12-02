@@ -1,26 +1,5 @@
-plugins {
-    id 'java-library'
-    id 'idea'
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
-
-repositories {
-    jcenter()
-    mavenCentral()
-    maven { url "https://repo.spring.io/milestone" }
-    mavenLocal()
-}
-
-
 dependencies {
-    compile "org.projectlombok:lombok:1.18.10"
-    annotationProcessor "org.projectlombok:lombok:1.18.10"
-    compile 'com.alibaba:fastjson:1.2.60'
-    compile 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '2.1.6.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.cloud:spring-cloud-starter-zipkin'
 
 }

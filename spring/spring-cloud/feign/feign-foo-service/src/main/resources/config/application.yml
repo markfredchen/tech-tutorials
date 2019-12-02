@@ -1,0 +1,11 @@
+server:
+  port: 20003
+  servlet:
+    context-path: /feign-foo
+spring:
+  cloud:
+    consul:
+      discovery:
+        healthCheckPath: /feign-foo/actuator/health
+        healthCheckInterval: 2s
+        instanceId: ${spring.application.name}:${random.int(100,500)}

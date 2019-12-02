@@ -1,0 +1,21 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+POST http://localhost:8080/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code&code=7vaP0x&client_id=mc-authorization-code&client_secret=123456&redirect_uri=http://localhost:8000/sso
+
+###
+
+POST http://localhost:8080/oauth/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic bWMtcGFzc3dvcmQ6MTIzNDU2
+
+grant_type=password&username=admin&password=123456&scope=write read
+
+###

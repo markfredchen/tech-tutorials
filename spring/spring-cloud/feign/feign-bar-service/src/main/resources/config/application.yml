@@ -1,0 +1,14 @@
+server:
+  port: 20002
+  servlet:
+    context-path: /feign-bar
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckPath: /feign-bar/actuator/health
+        healthCheckInterval: 2s
+        instanceId: ${spring.application.name}:${random.int(100,500)}
+

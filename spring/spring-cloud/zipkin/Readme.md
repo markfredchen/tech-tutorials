@@ -24,7 +24,4 @@ public RestTemplate restTemplate(HttpTracing tracing) {
     return new RestTemplateBuilder().additionalInterceptors(TracingClientHttpRequestInterceptor.create(tracing)).build();
 }
 ```
-
-## 遗留问题
-
         

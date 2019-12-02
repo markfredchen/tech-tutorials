@@ -15,3 +15,9 @@ Zipkin可以单独使用
 可以。不用zipkin采集日志。可以使用spanId去日志中grep
 
 - [ ] `spring.sleuth.sampler.probability=1.0` 如果使用zipkin采集样本不是100%，意义何在？
+
+## 20191127
+
+- gradle `buildscript {}` 需要放在`build.gradle`最外层
+- Spring Boot v2.2.x 依赖与Spring Cloud v.Greenwich.SR4有冲突。需要使用Hoxton.RC1
+- Spring Security 新版必须指定`PasswordEncoder`
