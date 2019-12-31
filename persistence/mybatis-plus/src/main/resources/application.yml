@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    schema: classpath:db/schema-h2.sql
+    url: jdbc:p6spy:h2:mem:mp-test
+    username: root
+    password:
+mybatis-plus:
+  type-handlers-package: tech.markfredchen.persistence.mybatis.plus.persistence.typehanlder

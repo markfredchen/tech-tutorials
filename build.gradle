@@ -14,52 +14,33 @@ buildscript {
     }
 }
 
-ext {
-    javaProjects = [
-            'consul-bar-service',
-            'consul-foo-service',
-            'eureka-server',
-            'feign-bar-service',
-            'feign-foo-service',
-            'zipkin-bar-service',
-            'zipkin-foo-service',
-            'basic-security',
-            'oauth2-security',
-            'azure-ad-sso',
-            'spring-boot-web-with-front',
-            'spring-boot-react-front',
-    ]
-}
-
 subprojects {
-    if (javaProjects.contains(it.name)) {
 
-        apply plugin: 'java-library'
-        apply plugin: 'idea'
-        apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'io.spring.dependency-management'
 
-        java {
-            sourceCompatibility = JavaVersion.VERSION_1_8
-            targetCompatibility = JavaVersion.VERSION_1_8
-        }
+    compileJava {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
 
-        repositories {
-            jcenter()
-            mavenCentral()
-            maven { url "https://repo.spring.io/milestone" }
-        }
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://repo.spring.io/milestone" }
+    }
 
-        dependencies {
-            compile 'org.projectlombok:lombok:1.18.10'
-            annotationProcessor 'org.projectlombok:lombok:1.18.10'
-            compile 'com.alibaba:fastjson:1.2.60'
-        }
-        dependencyManagement {
-            imports {
-                mavenBom 'org.springframework.boot:spring-boot-dependencies:2.2.1.RELEASE'
-                mavenBom 'org.springframework.security:spring-security-bom:5.2.1.RELEASE'
-                mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Hoxton.RC1'
-            }
+    dependencies {
+        implementation 'org.projectlombok:lombok:1.18.10'
+        annotationProcessor 'org.projectlombok:lombok:1.18.10'
+        compile 'com.alibaba:fastjson:1.2.60'
+    }
+    dependencyManagement {
+        imports {
+            mavenBom 'org.springframework.boot:spring-boot-dependencies:2.2.1.RELEASE'
+            mavenBom 'org.springframework.security:spring-security-bom:5.2.1.RELEASE'
+            mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Hoxton.RC1'
         }
     }
 }

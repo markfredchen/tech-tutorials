@@ -2,7 +2,7 @@
 
 - 浏览器访问
 ```http request
-http://localhost:8080/oauth/authorize?response_type=token&client_id=mc-authorization-code&redirect_uri=http://localhost:8000/sso
+http://localhost:8080/oauth/authorize?response_type=code&client_id=mc-authorization-code&redirect_uri=http://localhost:8000/sso
 ```
 - 获取code
 ```http request

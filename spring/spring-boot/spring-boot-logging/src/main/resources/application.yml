@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: logging-service
+logging:
+  file:
+    path: /Users/markfredchen/devops/logs
+    name: ${logging.file.path}/${spring.application.name}.log
+  pattern:
+    rolling-file-name: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.log

@@ -1,0 +1,25 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:80/api/item
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
+
+POST https://login.chinacloudapi.cn/ed1aeba5-a380-42b5-9bfd-61cb1be6818e/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=b4b3ca99-dcc4-4284-86b5-c38b87ca1f6f
+&scope=user.read
+&username=markfred.chen@huilianyi.com
+&password=Markfred23
+&grant_type=password
+&client_secret=]4bNEUy]8byum6_xUP[7zSE7c3sJi@4X
+###

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: consul-config
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckInterval: 2s
+        instanceId: ${spring.application.name}:${random.int(100,500)}
+      config:
+        enabled: true
+        format: yaml
