@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
+import tech.markfredchen.persistence.mybatis.plus.persistence.typehanlder.JSONObjectTypeHandler;
 
 /**
  * @author markfredchen
@@ -16,7 +17,7 @@ public class Company {
     private Long id;
     @TableField(value = "company_name")
     private String name;
-    @TableField(value = "config")
+    @TableField(value = "config", typeHandler = JSONObjectTypeHandler.class)
     private JSONObject config;
     @Version
     private Integer version;

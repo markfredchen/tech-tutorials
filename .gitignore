@@ -1,6 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
-.gradle
+.gradle/
 build/
 out/
 .DS_Store

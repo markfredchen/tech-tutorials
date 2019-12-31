@@ -17,7 +17,7 @@ create table mp_company
 (
     id bigint null,
     company_name varchar(50) not null,
-    config JSON not null,
+    config varchar(1000) not null,
     version int not null,
     constraint mp_company_pk
         primary key (id)
